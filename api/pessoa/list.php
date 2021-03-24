@@ -1,9 +1,7 @@
 <?php
-include "conexao.php";
-include "funcoes.php";
+include "../conexao.php";
 
 global $conn;
-header("Content-type: application/json; charset=utf-8");
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $sql = "SELECT `id`, `nome`, `idade` FROM `pessoa`";

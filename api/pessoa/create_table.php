@@ -1,5 +1,5 @@
 <?php
-include "conexao.php";
+include "../conexao.php";
 global $conn;
 $sql = "CREATE TABLE IF NOT EXISTS `pessoa` (
     `id` int(11) NOT NULL AUTO_INCREMENT,

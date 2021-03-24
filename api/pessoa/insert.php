@@ -1,7 +1,6 @@
 <?php
 include "create_table.php";
 global $conn;
-header("Content-type: application/json; charset=utf-8");
 
 if (isset($_POST["dados"])) { //Verificar se existe o campo "dados" enviado SOMENTE pelo método POST
     $json = json_decode($_POST["dados"], true); //Converter o texto para JSON
