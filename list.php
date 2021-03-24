@@ -1,5 +1,7 @@
 <?php
 include "conexao.php";
+include "funcoes.php";
+
 global $conn;
 header("Content-type: application/json; charset=utf-8");
 
@@ -9,7 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $stm = $conn->prepare($sql);
         $stm->execute();
         $dados = $stm->fetchAll(PDO::FETCH_ASSOC);
-        echo json_encode($dados);
+        foreach ($dados as $poiscao => $linha) {
+            $linha['id'] = intval($linha['id']);
+            $linha['idade'] = intval($linha['idade']);
+        }
+        echo json_encode($dados, JSON_NUMERIC_CHECK);
     } catch (PDOException $e) {
         echo json_encode(array("erro" => "Erro ao listar dados da tabela: " . $e->getMessage()));
     }
