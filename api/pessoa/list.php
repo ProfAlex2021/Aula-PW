@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         }
         echo json_encode($dados, JSON_NUMERIC_CHECK);
     } catch (PDOException $e) {
+        
         echo json_encode(array("erro" => "Erro ao listar dados da tabela: " . $e->getMessage()));
     }
 }else
