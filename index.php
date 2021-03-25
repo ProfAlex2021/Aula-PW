@@ -60,8 +60,6 @@ function str2int($item, $pos) {
     return gettype($item) === 'string' ? intval($item) : $item;
 }?&gt;
                 </code></pre>
-      
-      </pre>
                 <p>Exemplo de trecho de código usado na estrutura deste site.</p>
             </div>
         </div>
