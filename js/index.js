@@ -1,3 +1,3 @@
-//hljs.highlightAll();
-hljs.initHighlightingOnLoad();
+hljs.highlightAll();
 hljs.initLineNumbersOnLoad();
+window.highlightJsBadge();

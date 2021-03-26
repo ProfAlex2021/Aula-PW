@@ -1,0 +1,16 @@
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+
+.hljs-ln-line.hljs-ln-numbers {
+    border-right: 1px solid #bababa;
+    padding-right: 10px;
+}
+
+.hljs-ln-line.hljs-ln-code {
+    padding-left: 10px;
+}
+pre{
+    border-radius: 5px;
+}
